@@ -1,4 +1,5 @@
 # libs
+lib/libEGL.so
 lib/libGAL.so
 lib/libGLSLC.so
 lib/libOMX_Core.so
@@ -52,7 +53,7 @@ lib/hw/audio_policy.rk29board.so
 lib/hw/camera.rk29board.so
 lib/hw/copybit.rk29board.so
 lib/hw/gralloc.rk29board.so
-#lib/hw/hwcomposer.rk29board.so
+lib/hw/hwcomposer.rk29board.so
 lib/hw/lights.rk29board.so
 lib/hw/sensors.rk29board.so
 
