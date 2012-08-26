@@ -47,9 +47,10 @@ BOARD_USE_SKIA_LCDTEXT := true
 
 TARGET_USES_ION := true
 
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_INITRC := device/mediacom/mp810c/recovery.init.rc
 TARGET_RECOVERY_PRE_COMMAND := "busybox dd if=/misc.img of=/dev/block/mtd/by-name/misc; sync"
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 
 BOARD_WLAN_DEVICE := rtl8192cu
 
