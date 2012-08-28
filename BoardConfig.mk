@@ -78,3 +78,6 @@ BOARD_USE_LEGACY_TOUCHSCREEN := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/mediacom/mp810c/releasetools/mp810c_ota_from_target_files
 
 BOARD_HAVE_BLUETOOTH := true
+
+# For WebKit rendering issue
+TARGET_FORCE_CPU_UPLOAD := true
