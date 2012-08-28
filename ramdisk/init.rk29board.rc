@@ -6,7 +6,7 @@ on early-init
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
 
-    export SECOND_VOLUME_STORAGE /mnt/external_sd
+    export SECONDARY_STORAGE /mnt/external_sd
     mkdir /mnt/external_sd 0000 system system
     export THIRD_VOLUME_STORAGE /mnt/usb_storage
     mkdir /mnt/usb_storage 0000 system system
@@ -17,6 +17,7 @@ on early-init
     #chown media_rw media_rw /data/media
 
 on init
+    write /sys/devices/system/cpu//cpufreq/interactive/hispeed_freq 1008000
     #symlink /etc/bluez/bcm432x/BCM4329B1_TestOnly_0237_26MHz_SEMCO_B23.hcd /bcm4329_samsung.hcd
     #symlink /etc/bluez/bcm432x/BCM4329B1_USI_WM-BN-BM-01.hcd /bcm4329_usi.hcd
     #symlink /etc/bluez/bcm432x/BCM4329B1_002.002.023.0389.0000_Cybertan-Foxconn_Cls2_extLNA_EDRmaxInputLev+PeakDEVM_NT.hcd /bcm4329_cybertan.hcd
@@ -113,3 +114,6 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
 
 service battery_charger /charger
     class charger
+
+on property:sys.boot_completed=1
+    write /sys/module/lowmemorykiller/parameters/minfree "2048,4096,51200,56320,61440,70400"
