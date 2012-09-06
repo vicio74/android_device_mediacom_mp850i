@@ -1,5 +1,5 @@
 VENDOR=mediacom
-DEVICE=mp810c
+DEVICE=mp850i
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

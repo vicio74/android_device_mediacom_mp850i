@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_mp810c.mk
+    $(LOCAL_DIR)/full_mp850i.mk
     

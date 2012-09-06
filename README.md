@@ -1,4 +1,4 @@
-android_device_mediacom_mp810c
+android_device_mediacom_mp850i
 ===========================
 
-Mediacom MP810C specific files
+Mediacom MP850i specific files

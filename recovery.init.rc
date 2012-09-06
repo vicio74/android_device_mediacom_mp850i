@@ -23,6 +23,8 @@ on init
     write /sys/devices/virtual/bdi/7:0/read_ahead_kb 2048
     write /sys/devices/virtual/bdi/93:0/read_ahead_kb 2048
 
+    write /proc/sys/kernel/hung_task_timeout_secs 0    
+
 on boot
     setprop service.adb.root 1
     ifup lo

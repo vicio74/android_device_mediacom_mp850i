@@ -14,7 +14,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-DEVICE_PACKAGE_OVERLAYS := device/mediacom/mp810c/overlay
+DEVICE_PACKAGE_OVERLAYS := device/mediacom/mp850i/overlay
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := $(LOCAL_PATH)/kernel
@@ -136,4 +136,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 $(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
 $(call inherit-product, build/target/product/full_base.mk)
-$(call inherit-product-if-exists, vendor/mediacom/mp810c/mp810c-vendor.mk)
+$(call inherit-product-if-exists, vendor/mediacom/mp850i/mp850i-vendor.mk)

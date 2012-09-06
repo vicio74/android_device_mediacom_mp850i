@@ -17,7 +17,7 @@
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Use the non-open-source parts, if they're present
--include vendor/mediacom/mp810c/BoardConfigVendor.mk
+-include vendor/mediacom/mp850i/BoardConfigVendor.mk
 
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
@@ -40,17 +40,17 @@ TARGET_BOARD_PLATFORM := rk29sdk
 TARGET_BOOTLOADER_BOARD_NAME := rk29board
 TARGET_PROVIDES_INIT_RC := true
 
-BOARD_EGL_CFG := device/mediacom/mp810c/egl.cfg
+BOARD_EGL_CFG := device/mediacom/mp850i/egl.cfg
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
 BOARD_USE_SKIA_LCDTEXT := true
 
 TARGET_USES_ION := true
 
-TARGET_RECOVERY_INITRC := device/mediacom/mp810c/recovery.init.rc
+TARGET_RECOVERY_INITRC := device/mediacom/mp850i/recovery.init.rc
 TARGET_RECOVERY_PRE_COMMAND := "busybox dd if=/misc.img of=/dev/block/mtd/by-name/misc; sync"
 BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
+#BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 
 BOARD_WLAN_DEVICE := rtl8192cu
 
@@ -69,15 +69,17 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 482344960
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1572864000
 
-TARGET_PREBUILT_KERNEL := device/mediacom/mp810c/kernel
+TARGET_PREBUILT_KERNEL := device/mediacom/mp850i/kernel
 
 TARGET_BOOTANIMATION_PRELOAD := true
 
 BOARD_USE_LEGACY_TOUCHSCREEN := true
 
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/mediacom/mp810c/releasetools/mp810c_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/mediacom/mp850i/releasetools/mp850i_ota_from_target_files
 
 BOARD_HAVE_BLUETOOTH := true
 
 # For WebKit rendering issue
 TARGET_FORCE_CPU_UPLOAD := true
+
+BOARD_CUSTOM_BOOTIMG_MK := device/mediacom/mp850i/custombootimg.mk
