@@ -82,4 +82,6 @@ BOARD_HAVE_BLUETOOTH := true
 # For WebKit rendering issue
 TARGET_FORCE_CPU_UPLOAD := true
 
-BOARD_CUSTOM_BOOTIMG_MK := device/mediacom/mp850i/custombootimg.mk
+BOARD_TOUCH_RECOVERY := true
+#BOARD_CUSTOM_BOOTIMG_MK := device/mediacom/mp850i/custombootimg.mk
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"font_10x18.h\"

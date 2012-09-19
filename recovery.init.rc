@@ -17,11 +17,24 @@ on init
     mkdir /sdcard
     mkdir /sd-ext
     mount tmpfs tmpfs /tmp
-    mount vfat /dev/block/mtdblock10 /emmc
+#    mount vfat /dev/block/mtdblock10 /emmc
     
-    write /sys/devices/virtual/bdi/179:0/read_ahead_kb 2048
-    write /sys/devices/virtual/bdi/7:0/read_ahead_kb 2048
-    write /sys/devices/virtual/bdi/93:0/read_ahead_kb 2048
+    write /sys/devices/virtual/bdi/179:0/read_ahead_kb 8192
+    write /sys/devices/virtual/bdi/7:0/read_ahead_kb 8192
+    write /sys/devices/virtual/bdi/93:0/read_ahead_kb 8192
+
+    write /sys/class/block/mmcblk0/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock0/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock1/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock2/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock3/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock4/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock5/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock6/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock7/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock8/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock9/bdi/read_ahead_kb 8192
+    write /sys/class/block/mtdblock10/bdi/read_ahead_kb 8192
 
     write /proc/sys/kernel/hung_task_timeout_secs 0    
 
